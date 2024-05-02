@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Company Details: </h3>
+    <div class="card">
+    <div class="card-header">
+        <%=company.name%>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <ul>
+        <p>Company name: &NonBreakingSpace;<span class="name"> <%= company.name %>  </span></p>
+        <p>From: &nbsp;<span class="from"> <%= company.from %></span></p>
+        <p>To: &nbsp; <span class="to"><%= company.to %></span></p>
+        <a href="<%= company.areport.url %> " class="btn btn-primary ">Annual Report</a>
+    </ul>
+    <br>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="col-8 offset-2">
+    <a href="/listings/<%=company._id%>/edit" class="btn btn-dark">Edit</a><br><br>
+    <form method="POST" action="/listings/<%=company._id%>?_method=DELETE">
+        <button class="btn btn-dark">Delete</button><br><br><br>
+    </form>
+    </div>
+    
+</body>

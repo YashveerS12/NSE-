@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-4">
+  <form class="mt-5">
+    <input type="text" class="search" placeholder="Enter Company name" name="search">
+    &nbsp;&nbsp; <input type="submit"  class="  company-search-btn" value="Search">
+  </form>
+</div>
+</div>
+  <br>
+  <br>
+    <h1>All Companies</h1>
+    <!-- <form method="GET" action="/listings/new">
+        <button>Add Company</button>
+    </form> -->
+    <% for(let company of allCompany){%>
+    <div class="card">
+        <div class="card-header">
+            Blue-chip Companies
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%=company.name%></h5>
+          <a href="/listings/<%=company._id%>" class="btn btn-primary">Show Details</a>
+        </div>
+      </div>
+      <% }%>
+</body>

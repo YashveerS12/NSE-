@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Edit your Details</h3>
+    <form method="POST" action="/listings/<%=company._id%>?_method=PUT">
+        <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text"  value="<%=company.name%>" name="company[name]" class="form-control">
+        </div>
+        <div class="mb-3">
+        <label for="from" class="form-label">From</label>
+        <input type="number" value="<%=company.from%>" name="company[from]" class="form-control">
+        </div>
+        <div class="mb-3">
+         <label for="to" class="form-label">To</label>
+        <input type="number" value="<%=company.to%>" name="company[to]" class="form-control">
+         </div>
+         <div class="mb-3">
+         <label for="areport" class="form-label">Annual Report</label>
+        <input type="text"  value="<%=company.areport%>" name="company[areport]" class="form-control">
+         </div>
+        <br>
+        <br>
+        <button class="btn add-btn">Edit</button>
+    </form>
+</div>
+</div>
+</body>
